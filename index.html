@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <title>Sexy Sherry</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .app {
+            height: 100vh;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="app">
+        <div class="hero" :style="cssProps">
+            <div class="hero-content" :style="propertiesHeroContent">
+                <div class="logo" :style="propertiesLogo">
+                </div>
+                <div class="coming-soon-text" :style="propertiesText">{{comingSoon}}</div>
+            </div>
+            <div class="icons"  :style="propertiesIcons">
+                <div class="follow-us-text" :style="propertiesFollowUsOn">{{followUs}}</div>
+                <div class="":style="propertiesIconOnly" >     
+                    <a href="https://www.instagram.com/hasiera_homes/" class="icon-insta" :style="propertiesInsta"></a>
+                    <a href="https://www.youtube.com/channel/UCkJEGdNEuGVpSR0P3UQRI-w" class="icon-youtube" :style="propertiesYoutube"></a>
+                </div>
+           
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                comingSoon: 'Coming Soon...',
+                followUs : 'Follow Us On',
+                cssProps: {
+                    backgroundImage: `url('src/images/background.jpg')`,
+                    backgroundPosition : "center",
+                    height: "100vh",
+                    overflow: "auto",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center"
+
+                },
+                propertiesHeroContent : {
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height : "100%",
+                    position :"absolute"
+                    
+                },
+                propertiesLogo: {
+                    backgroundImage: `url('src/images/logo.png')`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition : "center",
+                    height: "144px",
+                    width: "350px",
+                },
+                propertiesText: {
+                    color: "white",
+                    fontSize: "28px", 
+                    opacity: "0.7",
+                    marginTop : "15px",
+                    fontFamily: "sans-serif",
+                },
+                propertiesIcons: {
+                    display: "flex",
+                    flexDirection: "column",
+                    margin : "auto 4% 3% auto"
+                
+                },
+                propertiesFollowUsOn: {
+                    fontFamily: "sans-serif",
+                    color: "white",
+                    fontSize: "25px", 
+                    opacity: "0.7",
+                    margin : "5px"
+                },
+                propertiesIconOnly :{
+                    display: "flex",
+                    justifyContent: "space-around"
+                },
+                propertiesInsta: {
+                    backgroundImage: `url('src/images/insta.svg')`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition : "center",
+                    height: "40px",
+                    width: "40px",
+                    cursor : 'pointer'
+                },
+                propertiesYoutube: {
+                    backgroundImage: `url('src/images/youtube.svg')`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition : "center",
+                    height: "40px",
+                    width: "40px",
+                    cursor : 'pointer'
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>
